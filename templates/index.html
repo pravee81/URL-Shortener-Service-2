@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URL Shortener</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <!-- Include Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>URL Shortener</h1>
+      <!-- Text input for long URL -->
+      <div class="input-group">
+        <input type="text" id="longURL" placeholder="Enter Long URL">
+        <button class="icon-button" onclick="redirectToLongURL()" aria-label="Redirect Long URL">
+          <i class="fas fa-external-link-alt"></i>
+        </button>
+      </div>
+      <!-- Text input for shortened URL -->
+      <div class="input-group">
+        <input type="text" id="shortenedURL" readonly placeholder="Shortened URL">
+        <button class="icon-button" onclick="copyShortenedURL()" aria-label="Copy Shortened URL">
+          <i class="fas fa-copy"></i>
+        </button>
+        <button class="icon-button" onclick="redirectToShortenedURL()" aria-label="Redirect Shortened URL">
+          <i class="fas fa-external-link-alt"></i>
+        </button>
+      </div>
+      <!-- Buttons to shorten URL and clear contents -->
+      <div class="button-container">
+        <button onclick="shortenURL()" class="shorten-button">Shorten URL</button>
+        <button onclick="clearContents()" class="clear-button">Clear</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
